@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PM Consulting Inc. — Digital Marketing Agency</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; }
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        background: #0a0a0c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+      .hero-contact {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(55% + 4.5rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0 1.5rem;
+      }
+      .hero-contact-line {
+        width: 120px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #22c55e 20%, #22c55e 80%, transparent);
+        opacity: 0.6;
+        box-shadow: 0 0 12px #22c55e40;
+      }
+      .hero-contact-text {
+        font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+        font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+        color: #a1a1aa;
+        letter-spacing: 0.12em;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem 0.75rem;
+      }
+      .hero-contact-brand {
+        color: #fafafa;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+      }
+      .hero-contact-sep {
+        color: #22c55e;
+        font-weight: 300;
+        opacity: 0.9;
+        text-shadow: 0 0 8px #22c55e60;
+      }
+      .hero-contact-link {
+        color: #22c55e;
+        text-decoration: none;
+        transition: color 0.2s, text-shadow 0.2s;
+      }
+      .hero-contact-link:hover {
+        color: #4ade80;
+        text-shadow: 0 0 12px #22c55e, 0 0 24px #22c55e40;
+      }
+      .hero-terminal {
+        font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+        font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+        line-height: 1.7;
+        color: #e4e4e7;
+        max-width: 42rem;
+        width: 100%;
+      }
+      .hero-line { display: flex; align-items: flex-start; gap: 0.25rem; flex-wrap: wrap; }
+      .hero-prompt { color: #22c55e; flex-shrink: 0; user-select: none; }
+      .hero-title { color: #fafafa; font-weight: 500; letter-spacing: 0.02em; }
+      .hero-phrase-line { margin-top: 0.5rem; }
+      .hero-phrase { color: #a1a1aa; }
+      .cursor {
+        display: inline-block;
+        width: 0.6em;
+        height: 1.1em;
+        background: #22c55e;
+        margin-left: 2px;
+        vertical-align: text-bottom;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-terminal">
+        <div class="hero-line">
+          <span class="hero-prompt">$ </span>
+          <span class="hero-title" id="title"></span><span class="cursor" id="title-cursor"></span>
+        </div>
+        <div class="hero-line hero-phrase-line" id="phrase-line" style="display: none;">
+          <span class="hero-prompt">&gt; </span>
+          <span class="hero-phrase" id="phrase"></span><span class="cursor" id="phrase-cursor"></span>
+        </div>
+      </div>
+      <div class="hero-contact">
+        <div class="hero-contact-line"></div>
+        <p class="hero-contact-text">
+          <span class="hero-contact-brand">PM Consulting Inc.</span>
+          <span class="hero-contact-sep">|</span>
+          <span>Paul Meyers CEO</span>
+          <span class="hero-contact-sep">|</span>
+          <a href="tel:+17059966548" class="hero-contact-link">705-996-6548</a>
+          <span class="hero-contact-sep">|</span>
+          <a href="mailto:paul@pmconsulting.ca" class="hero-contact-link">paul@pmconsulting.ca</a>
+        </p>
+        <div class="hero-contact-line"></div>
+      </div>
+    </section>
+    <script>
+      const TITLE = 'PM Consulting Inc. Digital Marketing Agency';
+      const PHRASES = [
+        'AI Voice',
+        'AI Conversational',
+        'AI Reviews',
+        'Database Reactivations',
+        'Smart Websites',
+        'SEO campaigns',
+        'CRM integrations',
+        'AI Workshops',
+        'AI Training',
+        'lead generation',
+      ];
+      const TYPING_MS = 80;
+      const DELETING_MS = 50;
+      const PAUSE_AFTER_TITLE_MS = 1200;
+      const PAUSE_AFTER_PHRASE_MS = 1800;
+      const PAUSE_BEFORE_NEXT_MS = 400;
+
+      const titleEl = document.getElementById('title');
+      const titleCursor = document.getElementById('title-cursor');
+      const phraseLine = document.getElementById('phrase-line');
+      const phraseEl = document.getElementById('phrase');
+
+      let titleLen = 0;
+      let phraseIndex = 0;
+      let phraseText = '';
+      let isDeleting = false;
+
+      function typeTitle() {
+        if (titleLen < TITLE.length) {
+          titleLen++;
+          titleEl.textContent = TITLE.slice(0, titleLen);
+          setTimeout(typeTitle, TYPING_MS);
+        } else {
+          titleCursor.style.display = 'none';
+          setTimeout(() => {
+            phraseLine.style.display = 'flex';
+            typePhrase();
+          }, PAUSE_AFTER_TITLE_MS);
+        }
+      }
+
+      function typePhrase() {
+        const phrase = PHRASES[phraseIndex];
+        if (!isDeleting) {
+          if (phraseText.length < phrase.length) {
+            phraseText = phrase.slice(0, phraseText.length + 1);
+            phraseEl.textContent = phraseText;
+            setTimeout(typePhrase, TYPING_MS);
+          } else {
+            setTimeout(() => { isDeleting = true; typePhrase(); }, PAUSE_AFTER_PHRASE_MS);
+          }
+        } else {
+          if (phraseText.length > 0) {
+            phraseText = phraseText.slice(0, -1);
+            phraseEl.textContent = phraseText;
+            setTimeout(typePhrase, DELETING_MS);
+          } else {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % PHRASES.length;
+            setTimeout(typePhrase, PAUSE_BEFORE_NEXT_MS);
+          }
+        }
+      }
+
+      typeTitle();
+    </script>
+  </body>
+</html>

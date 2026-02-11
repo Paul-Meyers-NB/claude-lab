@@ -1,0 +1,102 @@
+.app {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.placeholder {
+  color: #71717a;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.test-row {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #71717a;
+  font-size: 0.9rem;
+}
+
+.test-confetti {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+  background: #27272a;
+  color: #a1a1aa;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.test-confetti:hover {
+  background: #3f3f46;
+  color: #e4e4e7;
+}
+
+.message {
+  margin-bottom: 1rem;
+}
+
+.message .label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.message.user .label {
+  color: #818cf8;
+}
+
+.message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  background: #18181b;
+  color: #e4e4e7;
+  font-size: 1rem;
+}
+
+.input-row input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.input-row button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input-row button:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.input-row button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
