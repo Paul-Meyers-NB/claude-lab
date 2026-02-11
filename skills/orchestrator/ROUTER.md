@@ -187,6 +187,16 @@ Video scripts → ai-talking-head
 
 Brand tone enforcement → brand-voice
 
+Creative strategy / visual direction / campaign planning → ai-creative-strategist
+
+Product photography / hero images / e-commerce photos → ai-product-photo
+
+Product video / product reveals / animated product shots → ai-product-video
+
+Content repurposing / atomize content / turn into social posts → content-atomizer
+
+Newsletter writing / newsletter format / newsletter edition → newsletter
+
 Multi-step workflows → orchestrator
 
 If uncertain:

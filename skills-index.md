@@ -13,13 +13,14 @@ Available Skills:
 - ai-social-graphics
 - ai-talking-head
 - brand-voice
-- content-optimizer
+- content-atomizer
 - direct-response-copy
 - email-sequences
 - keyword-research
 - lead-magnet
 - newsletter
 - orchestrator
+- paul-meyers-knowledgebase
 - positioning-angles
 - seo-content
 
