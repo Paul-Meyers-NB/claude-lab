@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero Lead Loss for Contractors — BNI Presentation | Paul Meyers</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      overflow: hidden;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    .deck {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+    .slide {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      padding: 3rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .slide h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 0.5rem; font-weight: 700; color: #f8fafc; }
+    .slide h2 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin: 1.5rem 0 0.5rem; font-weight: 600; color: #94a3b8; }
+    .slide p, .slide li { font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.5; margin: 0.25rem 0; color: #cbd5e1; }
+    .slide ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+    .slide .tagline { font-size: clamp(1.1rem, 2vw, 1.35rem); color: #38bdf8; margin: 0.5rem 0 1rem; }
+    .slide .meta { font-size: 1rem; color: #64748b; margin-top: 1rem; }
+    .slide .stat { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; color: #38bdf8; margin: 0.5rem 0; }
+    .slide .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 0.5rem; }
+    .slide .two-col h2 { margin-top: 0; }
+    @media (max-width: 700px) { .slide .two-col { grid-template-columns: 1fr; } }
+    .slide .pillar { margin: 0.4rem 0; padding-left: 0.5rem; border-left: 3px solid #38bdf8; }
+    .slide .script { background: #1e293b; padding: 1rem 1.25rem; border-radius: 8px; font-style: italic; margin: 0.75rem 0; }
+    .slide .ask { font-size: 1.15rem; font-weight: 600; color: #f8fafc; margin: 1rem 0 0.5rem; }
+    .slide .contact { margin-top: 1rem; font-size: 1rem; color: #94a3b8; }
+    .notes {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #334155;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+    .notes summary { cursor: pointer; font-weight: 600; color: #94a3b8; }
+    .notes ul { margin: 0.25rem 0; padding-left: 1.25rem; }
+    .counter { position: fixed; bottom: 1rem; right: 1.5rem; font-size: 0.85rem; color: #475569; z-index: 10; }
+  </style>
+</head>
+<body>
+  <div class="deck" id="deck">
+    <!-- Slide 1 -->
+    <section class="slide">
+      <h1>Zero Lead Loss for Contractors</h1>
+      <p class="tagline">Fix the bucket before you buy more water.</p>
+      <p class="meta">Paul Meyers — PM Consulting Inc. / Contractor Marketing Engine</p>
+      <details class="notes">
+        <summary>Speaker notes (0:00–1:00)</summary>
+        <ul>
+          <li>Open bold: "Most contractors are setting fire to their leads…"</li>
+          <li>One sentence: "I help contractors stop losing the leads they already have. Fix the bucket before you buy more water."</li>
+          <li>BNI tie-in: "When you introduce me to a contractor who's drowning in chaos, you're giving them a way to get their life back. That's Givers Gain."</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <h1>The ugly truth</h1>
+      <p>Most contractors are losing the leads they already have.</p>
+      <ul>
+        <li>Missed calls. Form fills that sit. Old customers never contacted again.</li>
+        <li><em>Half of leads unanswered = half your ad spend in the trash.</em></li>
+      </ul>
+      <details class="notes">
+        <summary>Speaker notes (1:00–3:00)</summary>
+        <ul>
+          <li>Picture the chaos: contractor on a ladder, misses call, calls back in 3 hours—homeowner already called two other guys.</li>
+          <li>Numbers: $2K/month on ads, answer half = $1K in the trash. Form fills sitting 2 days. Old customers who'd come back.</li>
+          <li>"These are good people. Family men. They don't need more fluff—they need someone to help them stop the leak."</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide">
+      <h1>Before → After</h1>
+      <div class="two-col">
+        <div>
+          <h2>Before</h2>
+          <ul>
+            <li>Missed calls, slow callbacks</li>
+            <li>Leads in inbox, no follow-up</li>
+            <li>Old database sitting unused</li>
+            <li>Business owns them</li>
+          </ul>
+        </div>
+        <div>
+          <h2>After</h2>
+          <ul>
+            <li>Calls answered (human or AI)</li>
+            <li>Leads nurtured automatically</li>
+            <li>Database reactivated = revenue</li>
+            <li>Time back. Weekends back.</li>
+          </ul>
+        </div>
+      </div>
+      <details class="notes">
+        <summary>Speaker notes</summary>
+        <ul><li>"This is the transformation. Not more dashboards—results."</li></ul>
+      </details>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide">
+      <h1>The 5 pillars</h1>
+      <p class="tagline">Zero Lead Loss — short version.</p>
+      <div class="pillar"><strong>Smart Website</strong> — Capture, nurture, close</div>
+      <div class="pillar"><strong>Database Reactivation</strong> — Unlock dormant revenue</div>
+      <div class="pillar"><strong>Reviews AI</strong> — Steady Google reviews</div>
+      <div class="pillar"><strong>Voice AI</strong> — 24/7 phone answer & book</div>
+      <div class="pillar"><strong>Conversational AI</strong> — Catch leads that would bounce</div>
+      <details class="notes">
+        <summary>Speaker notes (3:00–6:00)</summary>
+        <ul>
+          <li>One sentence per pillar from talking points. Don't read the slide.</li>
+          <li>Story: "Kitchen reno company—2,500 in database. Reactivation campaign. Twelve signed. $400K. No new ads."</li>
+          <li>"Outcome isn't more dashboards—calls answered, leads nurtured, time back. They stop feeling like the business owns them."</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide">
+      <h1>Case result</h1>
+      <p class="stat">$400,000</p>
+      <p>from old leads</p>
+      <ul>
+        <li>Kitchen renovation company</li>
+        <li>2,500 in database → reactivation campaign → 12 closed</li>
+        <li>No new ads. Just follow-up.</li>
+      </ul>
+      <details class="notes">
+        <summary>Speaker notes</summary>
+        <ul><li>"One client. Twenty-five hundred people they'd already talked to. We woke them up. Twelve signed. Four hundred thousand. The money was already there."</li></ul>
+      </details>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide">
+      <h1>How to refer me</h1>
+      <h2>Who</h2>
+      <p>Contractor / home service pro, $1M–$5M revenue, busy but chaotic.</p>
+      <h2>Listen for</h2>
+      <ul>
+        <li>"I'm spending on ads but it's not working"</li>
+        <li>"I miss half my calls"</li>
+        <li>"I'm drowning in follow-ups"</li>
+        <li>"I have old customers I never contact"</li>
+      </ul>
+      <h2>Intro script</h2>
+      <p class="script">"I know someone who helps contractors stop losing leads—fix the bucket before you buy more water. Can I connect you?"</p>
+      <details class="notes">
+        <summary>Speaker notes (6:00–8:00)</summary>
+        <ul>
+          <li>Who: plumber, HVAC, renovator, roofer, $1M–$5M, busy but chaotic, spending on marketing and losing leads.</li>
+          <li>"When you hear those phrases—think of me."</li>
+          <li>"Make it easy—use that script. I'll take it from there."</li>
+          <li>"They're not doing me a favor. They're leaking money. You're doing them a favor."</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide">
+      <h1>Why this fits BNI</h1>
+      <ul>
+        <li><strong>Givers Gain:</strong> You're helping a contractor get their life back—not just passing a lead.</li>
+        <li><strong>Building relationships:</strong> Sending someone who delivers strengthens your relationship with that contractor.</li>
+        <li><strong>Accountability:</strong> I follow up. I don't let introductions die.</li>
+      </ul>
+      <details class="notes">
+        <summary>Speaker notes (8:00–9:00)</summary>
+        <ul>
+          <li>For contractor: more booked jobs, fewer missed calls, less chaos, time back, confidence.</li>
+          <li>For you: stronger relationship because you sent someone who delivers; I hold myself accountable.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide">
+      <h1>Recap & ask</h1>
+      <p><strong>1.</strong> Zero Lead Loss — 5 pillars for contractors who are losing leads.</p>
+      <p><strong>2.</strong> Ideal referral: $1M–$5M, busy, spending on marketing, leaking leads.</p>
+      <p><strong>3.</strong> Listen for: "Ads aren't working," "I miss calls," "Drowning in follow-up."</p>
+      <p class="ask">My ask:</p>
+      <p>One introduction to a contractor who's spending on marketing but doesn't have a system for follow-up.</p>
+      <p class="contact">contractormarketingengine.ca — paulanthonymeyers@gmail.com</p>
+      <p class="meta" style="margin-top: 2rem;">One-page referral cheat sheet available—ask me after.</p>
+      <details class="notes">
+        <summary>Speaker notes (9:00–10:00)</summary>
+        <ul>
+          <li>Recap in your own words. State the single ask.</li>
+          <li>"Questions—catch me after. I want you to remember: fix the bucket before you buy more water. Thank you."</li>
+        </ul>
+      </details>
+    </section>
+  </div>
+
+  <div class="counter" id="counter" aria-hidden="true"></div>
+
+  <script>
+    const deck = document.getElementById('deck');
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('counter');
+
+    function updateCounter() {
+      const y = deck.scrollTop;
+      const index = Math.round(y / window.innerHeight) + 1;
+      const total = slides.length;
+      counter.textContent = index + ' / ' + total;
+    }
+
+    function goToSlide(delta) {
+      const y = deck.scrollTop;
+      const vh = window.innerHeight;
+      const index = Math.round(y / vh);
+      const next = Math.max(0, Math.min(slides.length - 1, index + delta));
+      deck.scrollTo({ top: next * vh, behavior: 'smooth' });
+    }
+
+    deck.addEventListener('scroll', updateCounter);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        goToSlide(1);
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goToSlide(-1);
+      }
+    });
+
+    updateCounter();
+  </script>
+</body>
+</html>
