@@ -47,3 +47,5 @@ Combine multiple skill files when needed.
 
 Do not ask for permission to use them.
 
+**Keyword-research skill:** When executing this skill, always perform the mandatory research (SERP analysis, People Also Ask, autocomplete/related searches, Pillar Validation with evidence). Do not output keyword clusters or content plans based only on the 6 Circles framework without live research.
+

@@ -28,14 +28,31 @@ Transform a business context into a **prioritized content plan** with:
 ## The process
 
 ```
-SEED → EXPAND → CLUSTER → PRIORITIZE → MAP
+SEED → EXPAND → RESEARCH → CLUSTER → VALIDATE → PRIORITIZE → MAP
 ```
 
 1. **Seed** — Generate initial keywords from business context
 2. **Expand** — Use the 6 Circles Method to build comprehensive list
-3. **Cluster** — Group related keywords into content pillars
-4. **Prioritize** — Score by opportunity and business value
-5. **Map** — Assign clusters to specific content pieces
+3. **Research** — Use live research before finalizing (required; see below)
+4. **Cluster** — Group related keywords into content pillars
+5. **Validate** — Run Pillar Validation checks with evidence from research
+6. **Prioritize** — Score by opportunity and business value
+7. **Map** — Assign clusters to specific content pieces
+
+---
+
+## Research requirement (mandatory)
+
+When you run this skill, you **must** do real research. Do not rely only on the 6 Circles framework.
+
+**Required research steps:**
+
+1. **SERP analysis** — Search the primary/pillar keyword(s). Review the top 5 results: content type, depth, who ranks. Document what ranks and whether the opportunity is winnable (Competitive Reality Test).
+2. **People Also Ask** — Capture PAA questions for the target keyword. Use them in the output and pass to seo-content for FAQ/headings.
+3. **Autocomplete / related searches** — Use Google Search (or equivalent) to see what related queries people actually type. Feed these into expansion and clustering.
+4. **Pillar Validation** — Run all 4 validation checks (Search Volume Test, Product vs. Market, Competitive Reality, Proprietary Advantage). For Search Volume and Competitive Reality, use the SERP research above; document PASS/FAIL with evidence.
+
+Use web search, SERP fetches, or other read-only tools to perform this research. The output must include a short "Research summary" or "SERP snapshot" with findings. If you cannot access live search, say so and note that validation is partial.
 
 ---
 
@@ -470,12 +487,12 @@ The output is a prioritized plan. Execution is separate.
 
 ---
 
-## Free tools to supplement
+## Free tools to use (for Research step)
 
-If the user needs data validation:
+Use these to perform the mandatory research:
 
-- **Google Trends** (trends.google.com) — Trend direction, seasonality
-- **Google Search** — SERP analysis, autocomplete, "People Also Ask"
+- **Google Search** — SERP analysis (top 5 results), autocomplete, "People Also Ask". Required for validation.
+- **Google Trends** (trends.google.com) — Trend direction, seasonality (for opportunity scoring)
 - **AnswerThePublic** (free tier) — Question-based keywords
 - **AlsoAsked** (free tier) — PAA relationship mapping
 - **Reddit/Quora search** — Real user questions and language
