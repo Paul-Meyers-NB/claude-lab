@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f0f12;
+  color: #e4e4e7;
+  min-height: 100vh;
+}
+
+/* Confetti canvas must be on top of the app so you can see it */
+body > canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+}
